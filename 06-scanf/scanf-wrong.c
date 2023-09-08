@@ -8,8 +8,6 @@ int main(void)
     printf("Zadejte Vas PIN prosim: ");
     scanf("PIN: %u", &user_input);
 
-    printf("%d\n", user_input);
-
     if (user_input == pin) 
     {
         printf("Welcome!\n");
