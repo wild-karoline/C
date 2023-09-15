@@ -1,10 +1,12 @@
 #include <stdio.h>
 
+// Funkce pro samotny vypocet BMI na zaklade vysky a vahy
 float vypocetBmi(float vaha, float vyska)
 {
     return vaha / (vyska / 100 * vyska / 100);
 }
 
+// Funkce, ktera na zaklade BMI vytiskne na konzoli odpovidajici kategorii
 void vysledekKategorie(float bmi)
 {
     printf("Kategorie: \n");
@@ -29,6 +31,8 @@ void vysledekKategorie(float bmi)
     }
 }
 
+// Funkce, ktera na zaklade BMI vytiskne na konzoli odpovidajici
+//   zdravotni rizika
 void vysledekZdravotniRizika(float bmi)
 {
     printf("Zdravotni rizika: \n");
@@ -53,6 +57,7 @@ void vysledekZdravotniRizika(float bmi)
     }
 }
 
+// Kratka funkce na tisk uvitaciho textu na konzoli
 void vitej()
 {
     printf("--------------\n");

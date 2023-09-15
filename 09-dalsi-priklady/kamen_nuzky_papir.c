@@ -43,6 +43,7 @@ int main(void)
     return 0;
 }
 
+// Funkce vytiskne na konzoli text ke konci hry, body obou hracu a viteze.
 void oznameniViteze(int hrac, int pocitac)
 {
     printf("\n---------------------\n");
@@ -63,6 +64,8 @@ void oznameniViteze(int hrac, int pocitac)
     }
 }
 
+// Funkce, ktera vola funkce, ktere vraci volbu uzivatele a volbu pocitace. 
+//   Funkce nasledne vraci vysledek kola na zaklade techto dvou voleb.
 int hra()
 {
     int volba_hrace = inputHrace();
@@ -76,6 +79,8 @@ int hra()
     return vysledekKola(volba_hrace, volba_pocitace);
 }
 
+// Funkce, ktera vyzve uzivatele k volbe. Vyzva je opet ve smycce, ktera
+//   se opakuje tak dlouho, dokud hrac nezada platnou volbu.
 int inputHrace()
 {
     printf("Jakou taktiku zvolis?\n");
@@ -98,6 +103,7 @@ int inputHrace()
     }
 }
 
+// Funkce, ktera kontroluje, zda hrac zadal jeden z povolenych prikazu.
 int spravnyInput(int volba)
 {
     if (volba == 'K' || volba == 'N' || volba == 'P' ||
@@ -109,6 +115,7 @@ int spravnyInput(int volba)
     return 0;
 }
 
+// Funkce, ktera prevadi pismeno z maleho na velke.
 int prevodNaVelkePismeno(int volba)
 {
     if (volba >= 97 && volba <=122)
@@ -118,6 +125,7 @@ int prevodNaVelkePismeno(int volba)
     return volba;
 }
 
+// Funkce, ktera na zaklade nahodneho cisla od 0 do 2 vraci volbu pocitace
 int inputPocitace()
 {
     // inicializace generatoru nahodneho cisla
@@ -144,6 +152,7 @@ int inputPocitace()
     return -1;
 }
 
+// Funkce, ktera urcuje vysledek kola na zaklade volby hrace a volby pocitace.
 int vysledekKola(int volba_hrace, int volba_pocitace)
 {
     if (volba_hrace == volba_pocitace)
